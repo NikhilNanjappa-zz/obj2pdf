@@ -1,6 +1,6 @@
 {
-  "name": "obj2pdf",
-  "version": "0.0.2",
+  "name": "json2pdf",
+  "version": "0.0.1",
   "description": "A npm package to convert an object to PDF",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
