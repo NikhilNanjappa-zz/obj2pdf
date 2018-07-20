@@ -1,5 +1,4 @@
 import * as pdfMake from 'pdfmake/src/printer';
-import * as path from 'path';
 
 export function generatePDF(obj: object) {
   return new Promise((resolve) => {
