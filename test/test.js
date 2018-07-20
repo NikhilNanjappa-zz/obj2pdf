@@ -14,7 +14,7 @@ describe('OBJ2PDF', () => {
       },
       "Customer calculated currency": "£",
       "Customer calculated amount": 200
-    };  
+    };
 
     index.generatePDF(inputJSON)
       .then((response) => {
@@ -25,5 +25,13 @@ describe('OBJ2PDF', () => {
         console.log("error is : ", err);
       });
 
+  });
+
+  it('should throw an error if JSON object is null', () => {
+    index.generatePDF(null)
+      .then(() => {})
+      .catch((err) => {
+        expect(err).not.to.be.undefined;
+      });
   });
 });
