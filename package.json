@@ -1,6 +1,6 @@
 {
-  "name": "json2pdf",
-  "version": "0.0.1",
+  "name": "obj2pdf",
+  "version": "0.0.2",
   "description": "A npm package to convert an object to PDF",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NikhilNanjappa/json2pdf.git"
+    "url": "git+https://github.com/NikhilNanjappa/obj2pdf.git"
   },
   "author": "Nikhil Nanjappa",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/NikhilNanjappa/json2pdf/issues"
+    "url": "https://github.com/NikhilNanjappa/obj2pdf/issues"
   },
-  "homepage": "https://github.com/NikhilNanjappa/json2pdf#readme",
+  "homepage": "https://github.com/NikhilNanjappa/obj2pdf#readme",
   "devDependencies": {
     "@types/node": "^10.5.2",
     "@types/pdfmake": "^0.1.1",

@@ -3,7 +3,7 @@ const expect = require('chai').expect;
 const index = require('../dist/index.js');
 const base64regex = /^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/;
 
-describe('JSON2PDF', () => {
+describe('OBJ2PDF', () => {
   it('should return a base64 string', () => {
 
     const inputJSON = {

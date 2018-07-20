@@ -1,4 +1,4 @@
-# json2pdf
-A npm package to convert a JSON to a PDF.
+# obj2pdf
+A npm package to convert a JSON object to a PDF.
 
-[![Build Status](https://travis-ci.org/NikhilNanjappa/json2pdf.svg?branch=master)](https://travis-ci.org/NikhilNanjappa/json2pdf)
+[![Build Status](https://travis-ci.org/NikhilNanjappa/obj2pdf.svg?branch=master)](https://travis-ci.org/NikhilNanjappa/obj2pdf)
