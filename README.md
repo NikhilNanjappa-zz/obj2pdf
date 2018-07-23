@@ -5,17 +5,41 @@ A server-side npm package to convert a JSON object to a PDF.
 [![Coverage Status](https://coveralls.io/repos/github/NikhilNanjappa/obj2pdf/badge.svg?branch=master)](https://coveralls.io/github/NikhilNanjappa/obj2pdf?branch=master)
 [![npm version](https://badge.fury.io/js/obj2json.svg)](https://badge.fury.io/js/obj2json)
 
-> CURRENTLY UNDER CONSTRUCTION
+# Dependencies
+
+This package is dependent on the [`pdfmake`](https://github.com/bpampuch/pdfmake) package.
+
+# Installation
+
+```sh
+npm install obj2pdf --save
+```
+
+or
+
+```sh
+yarn add obj2pdf
+```
 
 # Usage
 
-Import the package
+> If your Node is serving an Angular application, make sure you add the assets configuration in your `angular-cli.json` so the app copies the needed assets(fonts) from the package to your `outDir`(`dist` by default).
+
+1. Import the package
+
+Typescript:
 
 `import * as obj2pdf from 'obj2json'`
 
-next, use the `.generatePDF` function passing a valid JSON object to get a base64 string containing PDF data as the response.
+or 
 
-```
+Javascript:
+
+`const obj2pdf = require('obj2json');`
+
+2. Now, simply use the exposed `.generatePDF` function which takes in a valid JSON object as the parameter. It returns a base64 encoded string containing the PDF data.
+
+```javascript
 obj2pdf.generatePDF(inputJSON)
   .then((pdfData) => {
     // do something with pdfData
