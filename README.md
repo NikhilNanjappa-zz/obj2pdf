@@ -6,6 +6,14 @@ A server-side npm package to convert a JSON object to a PDF.
 [![npm version](https://badge.fury.io/js/obj2pdf.svg)](https://badge.fury.io/js/obj2pdf)
 
 <!-- TOC -->
+# Table of Contents
+
+- [Dependencies](https://github.com/NikhilNanjappa/obj2pdf#dependencies)
+- [Installation](https://github.com/NikhilNanjappa/obj2pdf#installation)
+- [Usage](https://github.com/NikhilNanjappa/obj2pdf#usage)
+- [How to use the base64 PDF data string](https://github.com/NikhilNanjappa/obj2pdf#how-to-use-the-base64-string)
+- [PDF Sample](https://github.com/NikhilNanjappa/obj2pdf#pdf-sample)
+- [PDF Specs](https://github.com/NikhilNanjappa/obj2pdf#pdf-specs)
 
 # Dependencies
 
@@ -99,7 +107,7 @@ obj2pdf.generatePDF(inputJSON)
   });
 ```
 
-# How to use the base64 string
+# How to use the base64 PDF data string
 
 The base64 encoded string response should look something like
 
