@@ -8,17 +8,21 @@ describe('OBJ2PDF', () => {
 
     const inputJSON = {
       "heading": "PDF Heading",
-      "Customer Details": {
-        "Name": "Nikhil",
+      "Employee Details": {
+        "First name": "John",
+        "Last name": "Doe",
         "Gender": "Male"
       },
-      "Customer calculated currency": "£",
-      "Customer calculated amount": 200
+      "Employer Details": {
+        "Name": "Google",
+        "Location": "London"
+      },
+      "Currency": "£",
+      "Amount": 10
     };
 
     index.generatePDF(inputJSON)
       .then((response) => {
-        // console.log("response is : ", response);
         expect(base64regex.test(response.split('base64,')[1])).to.be.true;
       })
       .catch((err) => {
