@@ -3,11 +3,11 @@ A server-side npm package to convert a JSON object to a PDF.
 
 [![Build Status](https://travis-ci.org/NikhilNanjappa/obj2pdf.svg?branch=master)](https://travis-ci.org/NikhilNanjappa/obj2pdf)
 [![Coverage Status](https://coveralls.io/repos/github/NikhilNanjappa/obj2pdf/badge.svg?branch=master)](https://coveralls.io/github/NikhilNanjappa/obj2pdf?branch=master)
-[![npm version](https://badge.fury.io/js/obj2json.svg)](https://badge.fury.io/js/obj2json)
+[![npm version](https://badge.fury.io/js/obj2pdf.svg)](https://badge.fury.io/js/obj2pdf)
 
 <!-- TOC -->
-<!-- Input JSON -->
 <!-- Generated PDF image -->
+<!-- How to use base64 data -->
 <!-- PDF specs like font sizes, allowed types, how to get 'heading' etc -->
 
 # Dependencies
@@ -16,13 +16,13 @@ This package is dependent on the [`pdfmake`](https://github.com/bpampuch/pdfmake
 
 # Installation
 
-```sh
+```shell
 npm install obj2pdf --save
 ```
 
 or
 
-```sh
+```shell
 yarn add obj2pdf
 ```
 
@@ -87,3 +87,25 @@ obj2pdf.generatePDF(inputJSON)
     console.log(`error caught : ${err}`);
   });
 ```
+
+# How to use the base64 string
+
+The base64 encoded string response should look something like
+
+```
+data:application/pdf;base64,JVBERi0xLjcKCjEgMCBvYmogICUgZW50cnkgcG9pbnQKPDwKICAvVHlwZSAvQ2F0YWxvZwogIC9Q...
+```
+
+This can then be used on client-side as the value to a `href` attribute of a HTML anchor element.
+
+```html
+<a href="data:application/pdf;base64,JVBERi0xLjc…">
+  Open PDF
+</a>
+```
+
+# PDF Sample
+
+If you used the JSON above, the generated PDF data upon viewing should look like
+
+![PDF Sample](https://github.com/NikhilNanjappa/obj2pdf/blob/master/lib/obj2pdf_sample.PNG "PDF Sample")
