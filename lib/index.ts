@@ -33,11 +33,17 @@ const createDocDefinition = (obj: any) => {
   try {
 
     let docDefinition: any = {
-      content: [
-        { text: obj.heading, fontSize: 15, alignment: "center", bold: true, margin: [0, 10] }
-      ]
+      content: []
     };
 
+    // If heading property exists, use it
+    if(obj.heading) {
+      docDefinition.content.push(
+        { text: obj.heading, fontSize: 15, alignment: "center", bold: true, margin: [0, 10] }
+      )
+    }
+
+    // Margins : [left, top, right, bottom] or [horizontal, vertical]
     for(const prop in obj) {
       if (typeof(obj[prop]) === "object") {
         // Push the obj key as section heading 
@@ -45,7 +51,7 @@ const createDocDefinition = (obj: any) => {
           { text: prop, fontSize: 12, bold: true, margin: [0, 10] }
         );
 
-        // Push obj values as section contents
+        // Push obj 'value' as sub-section contents
         for(const elem in obj[prop]) {
           docDefinition.content.push(
             { text: elem, fontSize: 10, bold: true },
@@ -55,7 +61,7 @@ const createDocDefinition = (obj: any) => {
       } else if (typeof(obj[prop]) === "string" || typeof(obj[prop]) === "number") {
         if(prop !== "heading") {
           docDefinition.content.push(
-            { text: prop, fontSize: 10, bold: true, margin: [0, 10] },
+            { text: prop, fontSize: 12, bold: true, margin: [0, 10, 0, 0] },
             { text: obj[prop], fontSize: 8, margin: [ 0, 0, 0, 10 ] }
           );
         }

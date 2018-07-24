@@ -6,9 +6,6 @@ A server-side npm package to convert a JSON object to a PDF.
 [![npm version](https://badge.fury.io/js/obj2pdf.svg)](https://badge.fury.io/js/obj2pdf)
 
 <!-- TOC -->
-<!-- Generated PDF image -->
-<!-- How to use base64 data -->
-<!-- PDF specs like font sizes, allowed types, how to get 'heading' etc -->
 
 # Dependencies
 
@@ -53,15 +50,29 @@ yarn add obj2pdf
 
 Typescript:
 
-`import * as obj2pdf from 'obj2json'`
+```shell
+import * as obj2pdf from 'obj2json'
+```
 
 or 
 
 Javascript:
 
-`const obj2pdf = require('obj2json');`
+```shell
+const obj2pdf = require('obj2json');
+```
 
 2. Now, simply use the exposed `.generatePDF` function which takes in a valid JSON object as the parameter. It returns a base64 encoded string containing the PDF data.
+
+Provide a `heading` property if needed to generate a heading for the PDF which would be center aligned(see sample image below).
+
+Each property(except heading) in the JSON corresponds a "Section" in the generated PDF (for eg. Employee Details, Employer Details in the below JSON example).
+
+The value of each property(Section) in the JSON can be one of `object`, `string` or `number`.
+
+An `object` value would specify sub-sections within a section(works atmost with 1 level nesting).
+
+A `string`/`number` value prints it as-is below the Section(no sub-sections).
 
 ```javascript
 const inputJSON = {
@@ -109,3 +120,11 @@ This can then be used on client-side as the value to a `href` attribute of a HTM
 If you used the JSON above, the generated PDF data upon viewing should look like
 
 ![PDF Sample](https://github.com/NikhilNanjappa/obj2pdf/blob/master/lib/obj2pdf_sample.PNG "PDF Sample")
+
+# PDF Specs
+
+- Fonts being used are **Roboto regular/bold**
+- PDF heading is **15px**, **center aligned**, **bold**.
+- Section heading is **12px**, **bold**.
+- Sub-section heading is **10px**, **bold**.
+- Section/Sub-section value is **8px**.
