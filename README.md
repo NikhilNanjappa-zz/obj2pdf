@@ -64,6 +64,21 @@ Javascript:
 2. Now, simply use the exposed `.generatePDF` function which takes in a valid JSON object as the parameter. It returns a base64 encoded string containing the PDF data.
 
 ```javascript
+const inputJSON = {
+  "heading": "PDF Heading",
+  "Employee Details": {
+    "First name": "John",
+    "Last name": "Doe",
+    "Gender": "Male"
+  },
+  "Employer Details": {
+    "Name": "Google",
+    "Location": "London"
+  },
+  "Currency": "£",
+  "Amount": 10
+};
+
 obj2pdf.generatePDF(inputJSON)
   .then((pdfData) => {
     // do something with pdfData
