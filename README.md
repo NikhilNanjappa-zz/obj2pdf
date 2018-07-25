@@ -59,7 +59,7 @@ yarn add obj2pdf
 Typescript:
 
 ```shell
-import * as obj2pdf from 'obj2json'
+import * as obj2pdf from 'obj2pdf';
 ```
 
 or 
@@ -67,7 +67,7 @@ or
 Javascript:
 
 ```shell
-const obj2pdf = require('obj2json');
+const obj2pdf = require('obj2pdf');
 ```
 
 2. Now, simply use the exposed `.generatePDF` function which takes in a valid JSON object as the parameter. It returns a base64 encoded string containing the PDF data.
