@@ -11,9 +11,9 @@ A server-side npm package to convert a JSON object to a PDF.
 - [Dependencies](https://github.com/NikhilNanjappa/obj2pdf#dependencies)
 - [Installation](https://github.com/NikhilNanjappa/obj2pdf#installation)
 - [Usage](https://github.com/NikhilNanjappa/obj2pdf#usage)
-- [How to use the base64 PDF data string](https://github.com/NikhilNanjappa/obj2pdf#how-to-use-the-base64-string)
-- [Generated PDF Sample](https://github.com/NikhilNanjappa/obj2pdf#pdf-sample)
-- [Generated PDF Specs](https://github.com/NikhilNanjappa/obj2pdf#pdf-specs)
+- [How to use the base64 PDF data string](https://github.com/NikhilNanjappa/obj2pdf#how-to-use-the-base64-pdf-data-string)
+- [Generated PDF Sample](https://github.com/NikhilNanjappa/obj2pdf#generated-pdf-sample)
+- [Generated PDF Specs](https://github.com/NikhilNanjappa/obj2pdf#generated-pdf-specs)
 
 # Dependencies
 
