@@ -6,14 +6,14 @@ A server-side npm package to convert a JSON object to a PDF.
 [![npm version](https://badge.fury.io/js/obj2pdf.svg)](https://badge.fury.io/js/obj2pdf)
 
 <!-- TOC -->
-# Table of Contents
+# Table of contents
 
 - [Dependencies](https://github.com/NikhilNanjappa/obj2pdf#dependencies)
 - [Installation](https://github.com/NikhilNanjappa/obj2pdf#installation)
 - [Usage](https://github.com/NikhilNanjappa/obj2pdf#usage)
-- [How to use the base64 PDF data string](https://github.com/NikhilNanjappa/obj2pdf#how-to-use-the-base64-string)
-- [PDF Sample](https://github.com/NikhilNanjappa/obj2pdf#pdf-sample)
-- [PDF Specs](https://github.com/NikhilNanjappa/obj2pdf#pdf-specs)
+- [How to use the base64 PDF data string](https://github.com/NikhilNanjappa/obj2pdf#how-to-use-the-base64-pdf-data-string)
+- [Generated PDF Sample](https://github.com/NikhilNanjappa/obj2pdf#generated-pdf-sample)
+- [Generated PDF Specs](https://github.com/NikhilNanjappa/obj2pdf#generated-pdf-specs)
 
 # Dependencies
 
@@ -38,7 +38,7 @@ yarn add obj2pdf
 Typescript:
 
 ```shell
-import * as obj2pdf from 'obj2json'
+import * as obj2pdf from 'obj2pdf';
 ```
 
 or 
@@ -46,7 +46,7 @@ or
 Javascript:
 
 ```shell
-const obj2pdf = require('obj2json');
+const obj2pdf = require('obj2pdf');
 ```
 
 2. Now, simply use the exposed `.generatePDF` function which takes in a valid JSON object as the parameter. It returns a base64 encoded string containing the PDF data.
@@ -102,13 +102,13 @@ This can then be used on client-side as the value to a `href` attribute of a HTM
 </a>
 ```
 
-# PDF Sample
+# Generated PDF Sample
 
 If you used the JSON above, the generated PDF data upon viewing should look like
 
 ![PDF Sample](https://github.com/NikhilNanjappa/obj2pdf/blob/master/lib/obj2pdf_sample.PNG "PDF Sample")
 
-# PDF Specs
+# Generated PDF Specs
 
 - Fonts being used are **Roboto regular/bold**
 - PDF heading is **15px**, **center aligned**, **bold**.
