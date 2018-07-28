@@ -5,7 +5,6 @@ A server-side npm package to convert a JSON object to a PDF.
 [![Coverage Status](https://coveralls.io/repos/github/NikhilNanjappa/obj2pdf/badge.svg?branch=master)](https://coveralls.io/github/NikhilNanjappa/obj2pdf?branch=master)
 [![npm version](https://badge.fury.io/js/obj2pdf.svg)](https://badge.fury.io/js/obj2pdf)
 
-<!-- TOC -->
 # Table of contents
 
 - [Dependencies](https://github.com/NikhilNanjappa/obj2pdf#dependencies)
