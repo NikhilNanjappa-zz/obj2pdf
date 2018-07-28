@@ -33,27 +33,6 @@ yarn add obj2pdf
 
 # Usage
 
-> **If your Node is serving an Angular application**, make sure you add the assets configuration in your `angular-cli.json` so the app copies the needed assets(fonts) from the package to your `outDir`(`dist` by default) during `ng build`.
-
-```javascript
-...
-"apps": [
-  {
-    "root": "src",
-    "outDir": "dist",
-    "assets": [
-      "assets",
-      "api",
-      "favicon.ico",
-      { // add this part
-        "glob": "**/*", 
-        "input": "../node_modules/obj2pdf/dist/public",
-        "output": "/public/"
-      }
-    ],
-...
-```
-
 1. Import the package
 
 Typescript:

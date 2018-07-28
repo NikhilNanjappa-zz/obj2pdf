@@ -4,10 +4,10 @@ export function generatePDF(obj: object) {
   return new Promise((resolve) => {
     const fontDescriptors = {
       'Roboto' : {
-        normal: 'dist/public/fonts/Roboto-Regular.ttf',
-        bold: 'dist/public/fonts/Roboto-Bold.ttf',
-        italics: 'dist/public/fonts/Roboto-Italic.ttf',
-        bolditalics: 'dist/public/fonts/Roboto-BoldItalic.ttf'
+        normal: 'node_modules/obj2pdf/dist/public/fonts/Roboto-Regular.ttf',
+        bold: 'node_modules/obj2pdf/dist/public/fonts/Roboto-Bold.ttf',
+        italics: 'node_modules/obj2pdf/dist/public/fonts/Roboto-Italic.ttf',
+        bolditalics: 'node_modules/obj2pdf/dist/public/fonts/Roboto-BoldItalic.ttf'
       }
     };
 
