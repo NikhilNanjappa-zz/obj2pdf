@@ -1,15 +1,30 @@
 import * as pdfMake from 'pdfmake/src/printer';
+import * as fs from 'fs';
 
-export function generatePDF(obj: object) {
+export function generatePDF(obj: object, fontsPath?: string) {
   return new Promise((resolve) => {
-    const fontDescriptors = {
-      'Roboto' : {
-        normal: 'node_modules/obj2pdf/dist/public/fonts/Roboto-Regular.ttf',
-        bold: 'node_modules/obj2pdf/dist/public/fonts/Roboto-Bold.ttf',
-        italics: 'node_modules/obj2pdf/dist/public/fonts/Roboto-Italic.ttf',
-        bolditalics: 'node_modules/obj2pdf/dist/public/fonts/Roboto-BoldItalic.ttf'
-      }
-    };
+
+    let fontDescriptors: any;
+
+    if(fontsPath) {
+      fontDescriptors = {
+        'Roboto' : {
+          normal: fontsPath + '/Roboto-Regular.ttf',
+          bold: fontsPath + '/Roboto-Bold.ttf',
+          italics: fontsPath + '/Roboto-Italic.ttf',
+          bolditalics: fontsPath + '/Roboto-BoldItalic.ttf'
+        }
+      };
+    } else {
+      fontDescriptors = {
+        'Roboto' : {
+          normal: 'node_modules/obj2pdf/public/fonts/Roboto-Regular.ttf',
+          bold: 'node_modules/obj2pdf/public/fonts/Roboto-Bold.ttf',
+          italics: 'node_modules/obj2pdf/public/fonts/Roboto-Italic.ttf',
+          bolditalics: 'node_modules/obj2pdf/public/fonts/Roboto-BoldItalic.ttf'
+        }
+      };
+    }
 
     const printer = new pdfMake(fontDescriptors);
     const doc = printer.createPdfKitDocument(createDocDefinition(obj));

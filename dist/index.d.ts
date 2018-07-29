@@ -1,1 +1,1 @@
-export declare function generatePDF(obj: object): Promise<{}>;
+export declare function generatePDF(obj: object, fontsPath?: string): Promise<{}>;

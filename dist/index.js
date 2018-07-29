@@ -1,16 +1,29 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var pdfMake = require("pdfmake/src/printer");
-function generatePDF(obj) {
+function generatePDF(obj, fontsPath) {
     return new Promise(function (resolve) {
-        var fontDescriptors = {
-            'Roboto': {
-                normal: 'node_modules/obj2pdf/dist/public/fonts/Roboto-Regular.ttf',
-                bold: 'node_modules/obj2pdf/dist/public/fonts/Roboto-Bold.ttf',
-                italics: 'node_modules/obj2pdf/dist/public/fonts/Roboto-Italic.ttf',
-                bolditalics: 'node_modules/obj2pdf/dist/public/fonts/Roboto-BoldItalic.ttf'
-            }
-        };
+        var fontDescriptors;
+        if (fontsPath) {
+            fontDescriptors = {
+                'Roboto': {
+                    normal: fontsPath + '/Roboto-Regular.ttf',
+                    bold: fontsPath + '/Roboto-Bold.ttf',
+                    italics: fontsPath + '/Roboto-Italic.ttf',
+                    bolditalics: fontsPath + '/Roboto-BoldItalic.ttf'
+                }
+            };
+        }
+        else {
+            fontDescriptors = {
+                'Roboto': {
+                    normal: 'node_modules/obj2pdf/public/fonts/Roboto-Regular.ttf',
+                    bold: 'node_modules/obj2pdf/public/fonts/Roboto-Bold.ttf',
+                    italics: 'node_modules/obj2pdf/public/fonts/Roboto-Italic.ttf',
+                    bolditalics: 'node_modules/obj2pdf/public/fonts/Roboto-BoldItalic.ttf'
+                }
+            };
+        }
         var printer = new pdfMake(fontDescriptors);
         var doc = printer.createPdfKitDocument(createDocDefinition(obj));
         var chunks = [];

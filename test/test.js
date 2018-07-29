@@ -21,7 +21,7 @@ describe('OBJ2PDF', () => {
       "Amount": 10
     };
 
-    index.generatePDF(inputJSON)
+    index.generatePDF(inputJSON, 'public/fonts')
       .then((response) => {
         expect(base64regex.test(response.split('base64,')[1])).to.be.true;
       })
